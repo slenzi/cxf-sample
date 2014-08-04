@@ -13,8 +13,8 @@
 	<description>Sample application demonstrating SOAP and RESTful services use Apache CXF with Spring.</description>
 	
 	<properties>
-	    <cxf.version>2.6.2</cxf.version>
-	    <spring.version>3.1.1.RELEASE</spring.version>
+	    <cxf.version>2.7.12</cxf.version>
+	    <spring.version>4.0.2.RELEASE</spring.version>
 	    <spring.webflow.version>2.4.0.RELEASE</spring.webflow.version>
 	    <logback.version>1.1.2</logback.version>
 	    <jackson.jaxrs.version>1.9.13</jackson.jaxrs.version>
@@ -78,7 +78,8 @@
 			<version>${cxf.version}</version>
 		</dependency>
 
-		<!-- Spring -->		
+		<!-- Spring -->
+		<!--		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -104,6 +105,10 @@
 			<artifactId>spring-tx</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+		-->
+		<!-- 
+		Spring webflow depends on many of the other spring packages, core, transactions, webmvc, web, etc..
+		-->
 		<dependency>
 			<groupId>org.springframework.webflow</groupId>
 			<artifactId>spring-webflow</artifactId>

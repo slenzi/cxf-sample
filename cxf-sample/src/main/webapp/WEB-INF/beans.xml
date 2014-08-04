@@ -8,7 +8,7 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="
 	http://www.springframework.org/schema/beans
-	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/beans/spring-beans.xsd
 	http://cxf.apache.org/jaxrs
 	http://cxf.apache.org/schemas/jaxrs.xsd 
 	http://cxf.apache.org/jaxws
@@ -18,9 +18,11 @@
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context.xsd">
  
+ 	<!-- deprecated
  	<import resource="classpath:META-INF/cxf/cxf.xml" />
 	<import resource="classpath*:META-INF/cxf/cxf-extension-*.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+	-->
  
 	<context:component-scan base-package="org.lenzi" />
 	
