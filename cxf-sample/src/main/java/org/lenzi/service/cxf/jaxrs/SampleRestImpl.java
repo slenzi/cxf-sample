@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.lenzi.service.cxf;
+package org.lenzi.service.cxf.jaxrs;
 
 import org.lenzi.model.Sample;
 import org.slf4j.Logger;

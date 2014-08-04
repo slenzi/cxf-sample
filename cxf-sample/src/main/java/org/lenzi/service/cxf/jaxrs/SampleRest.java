@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.lenzi.service.cxf;
+package org.lenzi.service.cxf.jaxrs;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

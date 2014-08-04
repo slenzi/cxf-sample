@@ -29,11 +29,14 @@
 	<!-- Used for Object/JSON marshalling -->
 	<bean id="jsonProvider" class="org.codehaus.jackson.jaxrs.JacksonJsonProvider"/>
 	
-	<!-- RESTful service bean -->
-	<bean id="sampleRestfulServiceBean" class="org.lenzi.service.cxf.SampleRestImpl" />
+	<!-- jax-rs service bean -->
+	<bean id="sampleRestfulServiceBean" class="org.lenzi.service.cxf.jaxrs.SampleRestImpl" />
+	
+	<!-- jax-ws service bean -->
+	<bean id="sampleSoapServiceBean" class="org.lenzi.service.cxf.jaxws.SampleSoapImpl" />	
 	
 	<!-- 
-	JAX-RS REST Setup
+	JAX-RS REST Service Setup
 	-->
 	<jaxrs:server id="mySampleRest" address="/samplerest">
 		<jaxrs:serviceBeans>
@@ -46,6 +49,23 @@
 			<ref bean="serviceExceptionMapper" />
 			-->
 		</jaxrs:providers>
-	</jaxrs:server>	
+	</jaxrs:server>
+	
+	<!-- 
+	JAX-WS Soap Service Setup
+	-->	
+	<jaxws:endpoint
+		xmlns:tns="http://samplesoap.jaxws.cxf.service.lenzi.org/"
+		id="mySampleSoap"
+		endpointName="tns:SampleSoapImplPort"
+		serviceName="tns:SampleSoapImplService"
+		address="/SampleSoapImplPort">
+		<jaxws:implementor> 
+        	<bean parent="sampleSoapServiceBean" /> 
+        </jaxws:implementor>		
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>	
  
 </beans>

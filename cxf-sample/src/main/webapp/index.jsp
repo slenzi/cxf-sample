@@ -13,31 +13,43 @@
 <h2>Sample application integrating Spring & Apache CXF</h2>
 
 <p>
-<a href="services">View list of available services</a>
+<ul>
+	<li><a href="services">View list of available services</a></li>
+</ul>
 </p>
 
 <h3>Apache CXF JAX-RS RESTful Test</h3>
 
 <p>
-<a href="services/samplerest/testrest/hello">Fetch RESTful hello message</a>
+<ul>
+	<li><a href="services/samplerest/testrest/hello">Fetch RESTful hello message</a></li>
+</ul>
 </p>
 
 <p>
-<a href="services/samplerest/testrest/count">Fetch RESTful sample count</a>
+<ul>
+	<li><a href="services/samplerest/testrest/count">Fetch RESTful sample count</a></li>
+</ul>
 </p>
 
 <p>
-<a href="services/samplerest/testrest/sample/1">Fetch RESTful sample by ID 1</a><br>
-<a href="services/samplerest/testrest/sample/2">Fetch RESTful sample by ID 2</a><br>
-<a href="services/samplerest/testrest/sample/3">Fetch RESTful sample by ID 3</a><br>
-<a href="services/samplerest/testrest/sample/4">Fetch RESTful sample by ID 4</a><br>
-<a href="services/samplerest/testrest/sample/5">Fetch RESTful sample by ID 5</a><br>
-<a href="services/samplerest/testrest/sample/6">Fetch RESTful sample by ID 6 (Unknown)</a><br>
+<ul>
+	<li><a href="services/samplerest/testrest/sample/1">Fetch RESTful sample by ID 1</a></li>
+	<li><a href="services/samplerest/testrest/sample/2">Fetch RESTful sample by ID 2</a></li>
+	<li><a href="services/samplerest/testrest/sample/3">Fetch RESTful sample by ID 3</a></li>
+	<li><a href="services/samplerest/testrest/sample/4">Fetch RESTful sample by ID 4</a></li>
+	<li><a href="services/samplerest/testrest/sample/5">Fetch RESTful sample by ID 5</a></li>
+	<li><a href="services/samplerest/testrest/sample/6">Fetch RESTful sample by ID 6 (Unknown)</a></li>
+</ul>
 </p>
 
 <h3>Apache CXF JAX-WS SOAP Test</h3>
 
-<p>coming soon...</p>
+<p>
+<ul>
+	<li><a href="services/SampleSoapImplPort/getHello">Fetch SOAP envelope for getHello message</a></li>
+</ul>
+</p>
 
 </body>
 </html>
