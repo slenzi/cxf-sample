@@ -1,0 +1,122 @@
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.lenzi</groupId>
+	<artifactId>cxf-sample</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>cxf-sample</name>
+	
+	<description>Sample application demonstrating SOAP and RESTful services use Apache CXF with Spring.</description>
+	
+	<properties>
+	    <cxf.version>2.6.2</cxf.version>
+	    <spring.version>3.1.1.RELEASE</spring.version>
+	    <spring.webflow.version>2.4.0.RELEASE</spring.webflow.version>
+	    <logback.version>1.1.2</logback.version>
+	    <jackson.jaxrs.version>1.9.13</jackson.jaxrs.version>
+	</properties>
+	<!--
+	<properties>
+	    <cxf.version>2.6.2</cxf.version>
+	    <spring.version>3.1.1.RELEASE</spring.version>
+	    <spring.webflow.version>2.4.0.RELEASE</spring.webflow.version>
+	    <logback.version>1.1.2</logback.version>
+	    <jackson.jaxrs.version>1.9.13</jackson.jaxrs.version>
+	</properties>
+	-->
+
+	<dependencies>
+	
+		<!-- Unit testing -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Logging -->				
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+		</dependency>				
+				
+		<!-- to prevent eclipse from underlining everything red in JSPs  -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-servlet-api</artifactId>
+			<version>8.0.9</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<!-- Object/JSON marshalling for jax-rs -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-jaxrs</artifactId>
+			<version>${jackson.jaxrs.version}</version>
+		</dependency>		
+		
+		<!-- Apache CXF -->
+		<!--
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxws</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+		 -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxrs</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>		
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+
+		<!-- Spring -->		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.webflow</groupId>
+			<artifactId>spring-webflow</artifactId>
+			<version>${spring.webflow.version}</version>
+		</dependency>
+		
+				
+	</dependencies>
+	
+	<build>
+		<finalName>cxf-sample</finalName>
+	</build>
+
+</project>
