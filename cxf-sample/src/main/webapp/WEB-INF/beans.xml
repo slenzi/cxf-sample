@@ -35,6 +35,8 @@
 	<!-- jax-ws service bean -->
 	<bean id="sampleSoapServiceBean" class="org.lenzi.service.cxf.jaxws.SampleSoapImpl" />	
 	
+	<bean id="exceptionMapper" class="org.lenzi.service.cxf.jaxrs.exception.ServiceExceptionMapper" />
+	
 	<!-- 
 	JAX-RS REST Service Setup
 	-->
@@ -45,9 +47,7 @@
 		<!-- Use JacksonJsonProvider bean for Object/JSON marshalling -->
   		<jaxrs:providers>
 			<ref bean="jsonProvider" />
-			<!--
-			<ref bean="serviceExceptionMapper" />
-			-->
+			<ref bean="exceptionMapper" />
 		</jaxrs:providers>
 	</jaxrs:server>
 	

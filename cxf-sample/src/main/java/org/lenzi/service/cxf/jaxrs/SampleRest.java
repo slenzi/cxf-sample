@@ -9,6 +9,8 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.lenzi.service.cxf.jaxrs.exception.ServiceException;
+
 
 /**
  * @author sal
@@ -47,5 +49,17 @@ public interface SampleRest {
 	@Path("/sample/{sid}")
 	@Produces(MediaType.TEXT_PLAIN)		
 	public String getSample(@PathParam("sid") String id);
+	
+	/**
+	 * Test service exception
+	 * 
+	 * @param input arbitrary integer value to pass to the service
+	 * @return
+	 * @throws ServiceException When input value is greater than 10.
+	 */
+	@GET
+	@Path("/error/{input}")
+	@Produces(MediaType.TEXT_PLAIN)		
+	public String testException(@PathParam("input") int input) throws ServiceException;
 	
 }
