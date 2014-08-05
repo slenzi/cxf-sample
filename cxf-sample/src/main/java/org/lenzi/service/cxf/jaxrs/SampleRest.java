@@ -3,12 +3,14 @@
  */
 package org.lenzi.service.cxf.jaxrs;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.lenzi.model.Sample;
 import org.lenzi.service.cxf.jaxrs.exception.ServiceException;
 
 
@@ -49,6 +51,18 @@ public interface SampleRest {
 	@Path("/sample/{sid}")
 	@Produces(MediaType.TEXT_PLAIN)		
 	public String getSample(@PathParam("sid") String id);
+	
+	/**
+	 * Fetch a sample by id, testing JSON marshalling.
+	 * 
+	 * @param id The sample id
+	 * @return The sample identified by the specified id, in JSON format.
+	 */
+	@GET
+	@Path("/samplejson")
+	@Produces({"application/json"})
+	@Consumes({"application/json","application/x-www-form-urlencoded"})		
+	public Sample getSampleJson();		
 	
 	/**
 	 * Test service exception

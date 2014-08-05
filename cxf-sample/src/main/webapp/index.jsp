@@ -43,6 +43,12 @@
 </ul>
 </p>
 
+<p>
+<ul>
+	<li><a href="services/samplerest/testrest/samplejson">Fetch RESTful sample object as JSON</a></li>
+</ul>
+</p>
+
 <h3>Apache CXF JAX-WS SOAP Test</h3>
 
 <p>

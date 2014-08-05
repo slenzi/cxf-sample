@@ -47,6 +47,11 @@ public class SampleRestImpl implements SampleRest {
 	}
 
 	@Override
+	public Sample getSampleJson() {
+		return sample;
+	}
+
+	@Override
 	public String testException(int input) throws ServiceException {
 		logger.debug(SampleRestImpl.class.getName() + " testException called");
 		if(input > 10){
