@@ -53,10 +53,9 @@ public interface SampleRest {
 	public String getSample(@PathParam("sid") String id);
 	
 	/**
-	 * Fetch a sample by id, testing JSON marshalling.
+	 * Fetch sample, test JSON marshalling.
 	 * 
-	 * @param id The sample id
-	 * @return The sample identified by the specified id, in JSON format.
+	 * @return Sample object in JSON format.
 	 */
 	@GET
 	@Path("/samplejson")
